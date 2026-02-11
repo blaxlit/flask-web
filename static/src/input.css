@@ -3,7 +3,7 @@
 @plugin "daisyui";
 
 /* บอก Tailwind ให้สแกนหา class ในไฟล์ html */
-@source "../../templates"; 
+@source "../../templates";
 
 /* (Optional) ตั้งค่า DaisyUI Theme (ถ้าต้องการ) */
 @theme {

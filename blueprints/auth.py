@@ -8,7 +8,6 @@ from flask_login import (
 from models import db, User
 from forms import LoginForm, RegisterForm
 
-
 auth_bp = Blueprint("auth", __name__, url_prefix="/auth")
 
 

@@ -4,15 +4,16 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
+
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    password_hash = db.Column(db.String(255))  
+    password_hash = db.Column(db.String(255))
 
     @property
     def password(self):
-        raise AttributeError('Password is not a readable attribute!')
+        raise AttributeError("Password is not a readable attribute!")
 
     @password.setter
     def password(self, password):
